@@ -1,0 +1,65 @@
+{% load i18n staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>{% trans 'Leadbelly project manager' %}</title>
+        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css">
+</head>
+
+<body>
+	<div class="navbar navbar-inverse">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="#">Leadbelly</a>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="span5">
+				<div class="page-header">
+					<h1>Leadbelly <small><br />the simpliest project manager</small></h1>
+				</div>
+				<p>Même si on se ment, ce n'est pas un simple sport car c'est un très, très gros travail et cela même si les gens ne le savent pas ! Et là, vraiment, j'essaie de tout coeur de donner la plus belle réponse de la terre ! </p>
+
+				<p>Ça sounds good, j'ai vraiment une grande mission car là, j'ai un chien en ce moment à côté de moi et je le caresse, et cela même si les gens ne le savent pas ! Et tu as envie de le dire au monde entier, including yourself. </p>
+
+				<p>Ça sounds good, premièrement, c'est un très, très gros travail et c'est très, très beau d'avoir son propre moi-même ! Et tu as envie de le dire au monde entier, including yourself. </p>
+			</div>
+			<div class="span7">
+				<h2>{% trans 'Project list' %}</h2>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>{% trans 'Project title' %}</th>
+						</tr>
+					</thead>
+					{% for project in object_list %}
+					<tr>
+						<td>{{project.title}}<span class="pull-right"><a href="/project/{{project.id}}/edit" class="btn btn-link" ><i class="icon-edit"></i></a>&nbsp;<a href="/project/{{project.id}}/delete"  class="btn btn-link"><i class="icon-trash"></i></a></span></td>
+					</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-transition.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-alert.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-popover.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-button.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-carousel.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-typeahead.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-affix.js"></script>
+	<script src="{% static 'todo/app.js' %}"></script>
+</body>
+</html>
