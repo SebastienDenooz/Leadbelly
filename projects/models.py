@@ -3,18 +3,18 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 
-    CURRENCY_CHOICES = (
-        ('EUR', '€'),
-        ('DOL', '$'),
-        ('LIR', '£'),
-        ('YEN', '¥')
-    )
-    PROJECT_STATE = (
-        ('0', _(u'Draft')),
-        ('1', _(u'Quotation')),
-        ('2', _(u'Bill')),
-        ('3', _(u'Refused'))
-    )
+CURRENCY_CHOICES = (
+    ('EUR', '€'),
+    ('DOL', '$'),
+    ('LIR', '£'),
+    ('YEN', '¥')
+)
+PROJECT_STATE = (
+    ('0', _(u'Draft')),
+    ('1', _(u'Quotation')),
+    ('2', _(u'Bill')),
+    ('3', _(u'Refused'))
+)
 
 class Project(models.Model):
     title = models.CharField(_(u'Task name'), max_length=255)
