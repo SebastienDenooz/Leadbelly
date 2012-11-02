@@ -38,7 +38,7 @@
 					</thead>
 					{% for project in object_list %}
 					<tr>
-						<td>{{project.title}}<span class="pull-right"><a href="/project/{{project.id}}/edit" class="btn btn-link" ><i class="icon-edit"></i></a>&nbsp;<a href="/project/{{project.id}}/delete"  class="btn btn-link"><i class="icon-trash"></i></a></span></td>
+						<td>{{project.title}}<span class="pull-right"><a href="/project/{{project.id}}/edit" class="btn btn-link" ><i class="icon-edit"></i></a>&nbsp;<a href="/project/{{project.id}}/delete"  class="btn btn-link"><i class="icon-trash"></i></a>&nbsp;<a href="/project/{{project.id}}/view_print"  class="btn btn-link"><i class="icon-print"></i></a></span></td>
 					</tr>
 					{% endfor %}
 				</table>
