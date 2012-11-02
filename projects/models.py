@@ -10,10 +10,10 @@ CURRENCY_CHOICES = (
     ('YEN', '¥')
 )
 PROJECT_STATE = (
-    ('0', _(u'Draft')),
-    ('1', _(u'Quotation')),
-    ('2', _(u'Bill')),
-    ('3', _(u'Refused'))
+    (0, _(u'Draft')),
+    (1, _(u'Quotation')),
+    (2, _(u'Invoice')),
+    (3, _(u'Refused'))
 )
 
 class Project(models.Model):
